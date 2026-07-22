@@ -30,6 +30,10 @@ import serviceSolar from "@/assets/service-solar.jpg";
 import serviceSecurity from "@/assets/service-security.jpg";
 import serviceAutomation from "@/assets/service-automation.jpg";
 import serviceStore from "@/assets/service-store.jpg";
+import photoLogoWall from "@/assets/logo-wall.png.asset.json";
+import photoLojaInterior from "@/assets/loja-interior.png.asset.json";
+import photoIphone from "@/assets/iphone-17-pro-max.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -198,8 +202,9 @@ function Index() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
+              className="btn-shine inline-flex items-center gap-2 rounded-full bg-gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
             >
+              <span className="btn-shine-inner" aria-hidden />
               <MessageCircle className="h-4 w-4" />
               Falar com Especialista
             </a>
@@ -269,8 +274,9 @@ function Index() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
+                className="btn-shine group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow animate-glow-pulse transition hover:brightness-110"
               >
+                <span className="btn-shine-inner" aria-hidden />
                 Fale com um Especialista
                 <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
               </a>
@@ -398,8 +404,102 @@ function Index() {
         </div>
       </section>
 
-      {/* Assistência anchor bridge */}
-      <div id="assistencia" />
+      {/* Galeria — Nossa Loja */}
+      <section id="assistencia" className="relative overflow-hidden border-t border-border/60 py-24">
+        <div className="absolute inset-0 bg-gradient-radial-glow" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+              Nossa loja
+            </span>
+            <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
+              <span className="text-premium">Venha conhecer</span>{" "}
+              <span className="text-gradient-primary">a Supritronica</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Um espaço pensado para você viver a tecnologia de perto — smartphones, MacBooks,
+              acessórios e o time pronto para atender.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow lg:row-span-2">
+              <img
+                src={photoLojaInterior.url}
+                alt="Interior da loja Supritronica"
+                loading="lazy"
+                className="h-full min-h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+              <figcaption className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-primary backdrop-blur">
+                  Loja Física
+                </div>
+                <h3 className="mt-3 font-display text-2xl font-bold text-premium">
+                  Ambiente moderno & completo
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  R. Prudente de Moraes, 3108 — Centro, S. J. do Rio Preto.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow">
+              <img
+                src={photoLogoWall.url}
+                alt="Fachada com logo iluminado Supritronica"
+                loading="lazy"
+                className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+              <figcaption className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="font-display text-lg font-bold text-premium">
+                  Identidade que brilha
+                </h3>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Nosso logo em destaque na entrada da loja.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow">
+              <img
+                src={photoIphone.url}
+                alt="iPhone 17 Pro Max disponível na Supritronica"
+                loading="lazy"
+                className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+              <figcaption className="absolute bottom-0 left-0 right-0 p-5">
+                <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-primary backdrop-blur">
+                  Novidade
+                </div>
+                <h3 className="mt-2 font-display text-lg font-bold text-premium">
+                  iPhone 17 Pro Max
+                </h3>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Disponível com parcelamento em até 18x.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-shine group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-glow animate-glow-pulse transition hover:brightness-110"
+            >
+              <span className="btn-shine-inner" aria-hidden />
+              <MessageCircle className="h-5 w-5" />
+              Consultar disponibilidade
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </section>
+
 
       {/* Diferenciais */}
       <section className="border-t border-border/60 py-24">
