@@ -273,8 +273,9 @@ function Index() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
+                className="btn-shine group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow animate-glow-pulse transition hover:brightness-110"
               >
+                <span className="btn-shine-inner" aria-hidden />
                 Fale com um Especialista
                 <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
               </a>
