@@ -44,11 +44,11 @@ export const Route = createFileRoute("/")({
         content:
           "Soluções em energia solar, segurança eletrônica, automação e loja de smartphones e MacBooks em São José do Rio Preto. Fale com um especialista.",
       },
-      { property: "og:title", content: "Supritronica Tecnologia — Soluções que transformam" },
+      { property: "og:title", content: "Supritronica Tecnologia — Energia Solar, Segurança e Automação em Rio Preto" },
       {
         property: "og:description",
         content:
-          "Energia solar, segurança, automação e a melhor loja de smartphones e MacBooks em São José do Rio Preto.",
+          "Soluções em energia solar, segurança eletrônica, automação e loja de smartphones e MacBooks em São José do Rio Preto. Fale com um especialista.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
