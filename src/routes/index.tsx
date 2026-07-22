@@ -30,6 +30,10 @@ import serviceSolar from "@/assets/service-solar.jpg";
 import serviceSecurity from "@/assets/service-security.jpg";
 import serviceAutomation from "@/assets/service-automation.jpg";
 import serviceStore from "@/assets/service-store.jpg";
+import photoLogoWall from "@/assets/logo-wall.png.asset.json";
+import photoLojaInterior from "@/assets/loja-interior.png.asset.json";
+import photoIphone from "@/assets/iphone-17-pro-max.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
