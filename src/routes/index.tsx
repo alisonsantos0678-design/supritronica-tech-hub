@@ -257,10 +257,6 @@ function Index() {
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-medium text-primary">
-              <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-primary" />
-              Tecnologia com propósito · São José do Rio Preto
-            </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
               Tecnologia que transforma a forma como você{" "}
               <span className="text-gradient-primary">vive, trabalha</span> e se conecta.
