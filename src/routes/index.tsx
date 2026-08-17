@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Sun,
-  ShieldCheck,
-  Home,
   Smartphone,
+  Laptop,
+  Wrench,
+  CreditCard,
   ArrowRight,
   Check,
   MessageCircle,
@@ -18,37 +18,36 @@ import {
   Linkedin,
   Plus,
   Minus,
-  Zap,
+  ShieldCheck,
   Users,
-  Wrench,
   Sparkles,
+  Clock,
 } from "lucide-react";
 
 import logoAsset from "@/assets/supritronica-logo.png.asset.json";
 import heroBg from "@/assets/hero-bg.jpg";
-import serviceSolar from "@/assets/service-solar.jpg";
-import serviceSecurity from "@/assets/service-security.jpg";
-import serviceAutomation from "@/assets/service-automation.jpg";
-import serviceStore from "@/assets/service-store.jpg";
+import prodIphone from "@/assets/prod-iphone.jpg";
+import prodAndroid from "@/assets/prod-android.jpg";
+import prodMacbook from "@/assets/prod-macbook.jpg";
+import serviceRepair from "@/assets/service-repair.jpg";
 import photoLogoWall from "@/assets/logo-wall.png.asset.json";
 import photoLojaInterior from "@/assets/loja-interior.png.asset.json";
 import photoIphone from "@/assets/iphone-17-pro-max.jpg.asset.json";
 
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Supritronica Tecnologia — Energia Solar, Segurança e Automação em Rio Preto" },
+      { title: "Supritrônica: iPhones, Android e MacBooks parcelados no boleto" },
       {
         name: "description",
         content:
-          "Soluções em energia solar, segurança eletrônica, automação e loja de smartphones e MacBooks em São José do Rio Preto. Fale com um especialista.",
+          "Venda de iPhones, Android e MacBooks com parcelamento no boleto, mesmo para negativados, e conserto de celulares em São José do Rio Preto.",
       },
-      { property: "og:title", content: "Supritronica Tecnologia — Energia Solar, Segurança e Automação em Rio Preto" },
+      { property: "og:title", content: "Supritrônica: tecnologia acessível para todos" },
       {
         property: "og:description",
         content:
-          "Soluções em energia solar, segurança eletrônica, automação e loja de smartphones e MacBooks em São José do Rio Preto. Fale com um especialista.",
+          "iPhones, Android e MacBooks com parcelamento no boleto, mesmo negativado. Conserto de celulares com agilidade e confiança.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -58,108 +57,107 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATSAPP_URL =
-  "https://wa.me/5517996471617?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Supritronica.";
+  "https://wa.me/5517996471617?text=Ol%C3%A1%2C%20quero%20simular%20meu%20parcelamento%20no%20boleto%20com%20a%20Supritr%C3%B4nica.";
 
 const NAV = [
   { href: "#inicio", label: "Início" },
-  { href: "#solar", label: "Energia Solar" },
-  { href: "#seguranca", label: "Segurança" },
-  { href: "#automacao", label: "Automação" },
-  { href: "#loja", label: "Loja" },
-  { href: "#assistencia", label: "Assistência" },
+  { href: "#produtos", label: "Produtos" },
+  { href: "#boleto", label: "Parcelamento" },
+  { href: "#conserto", label: "Conserto" },
+  { href: "#loja", label: "Nossa Loja" },
   { href: "#contato", label: "Contato" },
 ];
 
 const SERVICES = [
   {
-    id: "solar",
-    icon: Sun,
-    tag: "01 — Energia",
-    title: "Energia Solar",
-    desc: "Reduza sua conta de luz em até 95% com um sistema fotovoltaico sob medida. Cuidamos da simulação, do projeto, da instalação e da burocracia com a concessionária.",
-    cta: "Simular economia",
-    image: serviceSolar,
-    bullets: ["Projeto sob medida", "Instalação com equipe própria", "Homologação inclusa"],
-  },
-  {
-    id: "seguranca",
-    icon: ShieldCheck,
-    tag: "02 — Proteção",
-    title: "Segurança Eletrônica",
-    desc: "Câmeras, alarmes e monitoramento remoto. Acompanhe seu imóvel em tempo real, direto do celular, 24 horas por dia.",
-    cta: "Proteger meu imóvel",
-    image: serviceSecurity,
-    bullets: ["Câmeras HD e 4K", "Monitoramento remoto", "Alarmes conectados"],
-  },
-  {
-    id: "automacao",
-    icon: Home,
-    tag: "03 — Inteligência",
-    title: "Automação Residencial e Empresarial",
-    desc: "Controle iluminação, climatização, portões e câmeras com um toque. Mais conforto, economia de energia e ambientes verdadeiramente inteligentes.",
-    cta: "Automatizar meu espaço",
-    image: serviceAutomation,
-    bullets: ["Cenas personalizadas", "Comando por voz", "Integração completa"],
-  },
-  {
-    id: "loja",
+    id: "iphones",
     icon: Smartphone,
-    tag: "04 — Loja & Assistência",
-    title: "Smartphones, MacBooks e Assistência",
-    desc: "iPhones, Xiaomi, Android e MacBooks — novos e seminovos, com garantia. Também fazemos manutenção e reparo especializado para todas as marcas.",
-    cta: "Ver produtos",
-    image: serviceStore,
-    bullets: ["Parcelamento em até 18x", "Peças de qualidade", "Prazo rápido de reparo"],
+    tag: "01 · Apple",
+    title: "Venda de iPhones",
+    desc: "Modelos novos e seminovos, testados e com garantia. Você escolhe o iPhone ideal para o seu momento e leva com condições de pagamento que cabem no seu bolso.",
+    cta: "Garanta seu iPhone parcelado",
+    image: prodIphone,
+    bullets: ["Aparelhos conferidos", "Garantia da loja", "Parcelamento no boleto"],
+  },
+  {
+    id: "android",
+    icon: Smartphone,
+    tag: "02 · Android",
+    title: "Venda de Android",
+    desc: "Samsung, Xiaomi, Motorola e outras marcas para todos os perfis de uso. Atendimento consultivo para você comparar modelos e escolher com segurança.",
+    cta: "Ver opções Android",
+    image: prodAndroid,
+    bullets: ["Diversas marcas", "Custo benefício real", "Pagamento facilitado"],
+  },
+  {
+    id: "macbooks",
+    icon: Laptop,
+    tag: "03 · Computadores",
+    title: "Venda de MacBooks",
+    desc: "MacBooks para estudo, trabalho e criação. Equipamentos revisados, com procedência garantida e a mesma facilidade de parcelamento dos smartphones.",
+    cta: "Simule seu MacBook",
+    image: prodMacbook,
+    bullets: ["Procedência garantida", "Revisão completa", "Boleto parcelado"],
+  },
+  {
+    id: "conserto",
+    icon: Wrench,
+    tag: "04 · Assistência",
+    title: "Conserto de celulares",
+    desc: "Troca de tela, bateria, conectores e reparos em geral com agilidade e transparência. Diagnóstico claro, orçamento antes do serviço e peças de qualidade.",
+    cta: "Fale com a Supritrônica",
+    image: serviceRepair,
+    bullets: ["Orçamento sem compromisso", "Prazo rápido", "Peças de qualidade"],
   },
 ];
 
 const DIFERENCIAIS = [
   {
+    icon: CreditCard,
+    title: "Boleto para negativados",
+    desc: "Analisamos seu caso com respeito e aprovamos o parcelamento mesmo com restrição no nome.",
+  },
+  {
     icon: Users,
     title: "Atendimento consultivo",
-    desc: "Entendemos sua necessidade antes de indicar a solução.",
+    desc: "Escutamos sua necessidade antes de indicar qualquer aparelho ou serviço.",
   },
   {
-    icon: Wrench,
-    title: "Equipe própria especializada",
-    desc: "Profissionais dedicados a cada área de atuação.",
+    icon: ShieldCheck,
+    title: "Procedência e garantia",
+    desc: "Todos os produtos passam por conferência e saem da loja com garantia.",
   },
   {
-    icon: Zap,
-    title: "Parcelamento facilitado",
-    desc: "Condições especiais, como smartphones em até 18x no carnê.",
-  },
-  {
-    icon: Sparkles,
-    title: "Suporte pós-venda",
-    desc: "Monitoramento contínuo e assistência sempre que precisar.",
+    icon: Clock,
+    title: "Agilidade no reparo",
+    desc: "Consertos com prazo definido e acompanhamento direto pelo WhatsApp.",
   },
 ];
 
 const FAQ = [
   {
-    q: "Como funcionam os painéis solares?",
-    a: "Eles captam a luz do sol e a transformam em eletricidade por meio do efeito fotovoltaico, gerando energia limpa para sua casa ou empresa.",
+    q: "Consigo parcelar mesmo estando negativado?",
+    a: "Sim. O parcelamento no boleto da Supritrônica foi criado justamente para quem está com restrição no nome. A análise é feita internamente, de forma rápida e sem burocracia.",
   },
   {
-    q: "Quais são os benefícios da energia solar?",
-    a: "Economia na conta de luz, redução da pegada de carbono e mais independência energética.",
+    q: "Quais produtos a Supritrônica vende?",
+    a: "Trabalhamos com iPhones, smartphones Android e MacBooks, em modelos novos e seminovos, sempre com procedência conferida.",
   },
   {
-    q: "Posso acompanhar minha segurança remotamente?",
-    a: "Sim. Com conexão à internet, você acessa as câmeras do seu imóvel pelo celular, de onde estiver.",
+    q: "Como funciona o pagamento no boleto?",
+    a: "Você escolhe o aparelho, definimos juntos a quantidade de parcelas e emitimos os boletos. Tudo combinado antes da retirada do produto.",
   },
   {
-    q: "Quais dispositivos posso automatizar?",
-    a: "Iluminação, climatização, portões, câmeras e outros sistemas domésticos ou empresariais.",
+    q: "Os aparelhos têm garantia?",
+    a: "Sim. Todos os produtos vendidos contam com garantia e suporte da nossa equipe técnica.",
   },
   {
-    q: "Os smartphones e MacBooks têm garantia?",
-    a: "Sim, todos os produtos vendidos contam com garantia e suporte técnico especializado da nossa equipe.",
+    q: "Vocês consertam qualquer marca de celular?",
+    a: "Atendemos iPhone, Samsung, Xiaomi, Motorola e demais marcas Android, com peças de qualidade e orçamento apresentado antes do serviço.",
   },
   {
-    q: "Vocês fazem manutenção de qualquer marca de celular?",
-    a: "Sim, atendemos iPhone, Xiaomi, Android e outras marcas, com peças de qualidade.",
+    q: "Preciso agendar atendimento?",
+    a: "Não é obrigatório. Você pode passar na loja no centro de São José do Rio Preto ou falar antes com a nossa equipe pelo WhatsApp.",
   },
 ];
 
@@ -175,13 +173,13 @@ function Index() {
           <a href="#inicio" className="flex items-center gap-3">
             <img
               src={logoAsset.url}
-              alt="Supritronica Tecnologia"
+              alt="Supritrônica Tecnologia"
               className="h-10 w-10 object-contain"
               width={40}
               height={40}
             />
             <span className="font-display text-lg font-semibold tracking-tight">
-              Supri<span className="text-primary">tronica</span>
+              Supri<span className="text-primary">trônica</span>
             </span>
           </a>
 
@@ -206,7 +204,7 @@ function Index() {
             >
               <span className="btn-shine-inner" aria-hidden />
               <MessageCircle className="h-4 w-4" />
-              Falar com Especialista
+              Simule seu parcelamento
             </a>
           </div>
 
@@ -238,7 +236,7 @@ function Index() {
                 rel="noreferrer"
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
               >
-                <MessageCircle className="h-4 w-4" /> Falar com Especialista
+                <MessageCircle className="h-4 w-4" /> Simule seu parcelamento
               </a>
             </nav>
           </div>
@@ -258,13 +256,24 @@ function Index() {
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-              Tecnologia que transforma a forma como você{" "}
-              <span className="text-gradient-primary">vive, trabalha</span> e se conecta.
+              <span className="text-premium">Supritrônica: tecnologia</span>{" "}
+              <span className="text-gradient-primary">acessível para todos.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-              Da energia solar à automação inteligente, da segurança do seu patrimônio ao smartphone
-              que cabe no seu bolso — a Supritronica reúne soluções completas em um só lugar.
+              Venda de iPhones, Android e MacBooks com parcelamento no boleto, mesmo para quem está
+              negativado. Também fazemos conserto de celulares com agilidade e confiança.
             </p>
+
+            <div className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-primary/50 bg-card/70 px-5 py-4 shadow-glow backdrop-blur">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground">
+                <CreditCard className="h-6 w-6" />
+              </span>
+              <span className="font-display text-lg font-bold sm:text-2xl">
+                Parcele no boleto{" "}
+                <span className="text-gradient-primary">mesmo estando negativado</span>
+              </span>
+            </div>
+
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href={WHATSAPP_URL}
@@ -273,27 +282,28 @@ function Index() {
                 className="btn-shine group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow animate-glow-pulse transition hover:brightness-110"
               >
                 <span className="btn-shine-inner" aria-hidden />
-                Fale com um Especialista
+                Simule seu parcelamento
                 <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
               </a>
               <a
-                href="#servicos"
+                href="#produtos"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-7 py-3.5 text-base font-semibold text-foreground backdrop-blur transition hover:bg-surface"
               >
-                Conheça nossas soluções
+                Ver produtos disponíveis
               </a>
             </div>
 
-            {/* Stats */}
             <div className="mt-16 grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
               {[
-                { n: "4", l: "Áreas de atuação" },
-                { n: "95%", l: "Economia potencial" },
-                { n: "24h", l: "Monitoramento" },
-                { n: "18x", l: "Parcelamento" },
+                { n: "iPhone", l: "Novos e seminovos" },
+                { n: "Android", l: "Diversas marcas" },
+                { n: "MacBook", l: "Procedência garantida" },
+                { n: "Boleto", l: "Mesmo negativado" },
               ].map((s) => (
                 <div key={s.l} className="border-l border-primary/40 pl-4">
-                  <div className="font-display text-3xl font-bold text-foreground">{s.n}</div>
+                  <div className="font-display text-2xl font-bold text-foreground sm:text-3xl">
+                    {s.n}
+                  </div>
                   <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
                     {s.l}
                   </div>
@@ -312,38 +322,40 @@ function Index() {
               Quem somos
             </span>
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
-              Tecnologia boa é a que{" "}
-              <span className="text-gradient-primary">resolve problemas reais.</span>
+              <span className="text-premium">Uma marca sólida,</span>{" "}
+              <span className="text-gradient-primary">feita para o dia a dia das pessoas.</span>
             </h2>
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              Somos uma empresa de tecnologia baseada em São José do Rio Preto, especializada em
-              conectar pessoas e negócios a soluções inteligentes: energia solar, segurança
-              eletrônica, automação e os melhores smartphones e notebooks do mercado.
+              A Supritrônica é uma loja de tecnologia de São José do Rio Preto, dedicada à venda de
+              iPhones, smartphones Android e MacBooks, além do conserto de celulares com atendimento
+              técnico especializado.
             </p>
             <p>
-              Acreditamos que tecnologia boa é aquela que <span className="text-foreground">economiza dinheiro, protege o que importa e simplifica o dia a dia</span>. Por
-              isso, atuamos do diagnóstico à instalação, com suporte próximo e linguagem simples,
-              sem complicação técnica.
+              Acreditamos que tecnologia de qualidade precisa estar ao alcance de todos. Por isso
+              oferecemos{" "}
+              <span className="text-foreground">parcelamento no boleto, inclusive para clientes negativados</span>
+              , com condições claras, sem letras miúdas e com o compromisso de quem atende de perto.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Serviços */}
-      <section id="servicos" className="relative border-t border-border/60 bg-surface/40 py-24">
+      {/* Produtos e serviços */}
+      <section id="produtos" className="relative border-t border-border/60 bg-surface/40 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              Nossas soluções
+              Nossos serviços
             </span>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
-              Quatro pilares. <span className="text-gradient-primary">Um só endereço.</span>
+              <span className="text-premium">Tudo o que fazemos,</span>{" "}
+              <span className="text-gradient-primary">com transparência.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Cada área com equipe especializada, para você não precisar coordenar vários
-              fornecedores.
+              Venda de iPhones, Android e MacBooks, parcelamento no boleto para negativados e
+              conserto de celulares. Simples assim.
             </p>
           </div>
 
@@ -400,8 +412,102 @@ function Index() {
         </div>
       </section>
 
-      {/* Galeria — Nossa Loja */}
-      <section id="assistencia" className="relative overflow-hidden border-t border-border/60 py-24">
+      {/* Destaque boleto */}
+      <section id="boleto" className="relative overflow-hidden border-t border-border/60 py-24">
+        <div className="absolute inset-0 bg-gradient-radial-glow" aria-hidden />
+        <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+            Nosso diferencial
+          </span>
+          <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
+            <span className="text-premium">Parcele no boleto</span>{" "}
+            <span className="text-gradient-primary">mesmo estando negativado.</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
+            Nome com restrição não é motivo para ficar sem o aparelho que você precisa. Fazemos a
+            análise internamente, combinamos as parcelas com você e emitimos os boletos na hora.
+          </p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {[
+              { t: "Sem cartão de crédito", d: "Você paga por boleto, no seu ritmo." },
+              { t: "Análise rápida", d: "Resposta no mesmo atendimento, sem burocracia." },
+              { t: "Condições combinadas", d: "Parcelas definidas antes de fechar a compra." },
+            ].map((b) => (
+              <div key={b.t} className="rounded-2xl border border-border bg-card p-6 text-left">
+                <h3 className="font-display text-lg font-semibold">{b.t}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{b.d}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-shine group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-glow animate-glow-pulse transition hover:brightness-110"
+            >
+              <span className="btn-shine-inner" aria-hidden />
+              <CreditCard className="h-5 w-5" />
+              Simule seu parcelamento
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Conserto */}
+      <section id="conserto" className="border-t border-border/60 bg-surface/40 py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div className="overflow-hidden rounded-3xl border border-border shadow-card">
+            <img
+              src={serviceRepair}
+              alt="Técnico da Supritrônica realizando conserto de celular"
+              loading="lazy"
+              width={1200}
+              height={900}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+              Assistência técnica
+            </span>
+            <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
+              <span className="text-premium">Conserto de celulares</span>{" "}
+              <span className="text-gradient-primary">com agilidade e confiança.</span>
+            </h2>
+            <p className="mt-5 text-lg text-muted-foreground">
+              Trocas de tela e bateria, limpeza, reparo de conectores e diagnóstico completo. Você
+              recebe o orçamento antes, acompanha o prazo e retira o aparelho funcionando como deve.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "Diagnóstico e orçamento sem compromisso",
+                "Peças de qualidade e garantia no serviço",
+                "Atendimento para iPhone e Android",
+              ].map((b) => (
+                <li key={b} className="flex items-center gap-3 text-sm text-foreground/90">
+                  <Check className="h-4 w-4 shrink-0 text-primary" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-shine mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
+            >
+              <span className="btn-shine-inner" aria-hidden />
+              <Wrench className="h-5 w-5" />
+              Fale com a Supritrônica
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Galeria Nossa Loja */}
+      <section id="loja" className="relative overflow-hidden border-t border-border/60 py-24">
         <div className="absolute inset-0 bg-gradient-radial-glow" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -410,11 +516,11 @@ function Index() {
             </span>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
               <span className="text-premium">Venha conhecer</span>{" "}
-              <span className="text-gradient-primary">a Supritronica</span>
+              <span className="text-gradient-primary">a Supritrônica</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Um espaço pensado para você viver a tecnologia de perto — smartphones, MacBooks,
-              acessórios e o time pronto para atender.
+              Um espaço pensado para você ver os aparelhos de perto, tirar dúvidas com a equipe e
+              fechar o seu parcelamento com tranquilidade.
             </p>
           </div>
 
@@ -422,20 +528,20 @@ function Index() {
             <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow lg:row-span-2">
               <img
                 src={photoLojaInterior.url}
-                alt="Interior da loja Supritronica"
+                alt="Interior da loja Supritrônica"
                 loading="lazy"
                 className="h-full min-h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-primary backdrop-blur">
-                  Loja Física
+                  Loja física
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-bold text-premium">
-                  Ambiente moderno & completo
+                  Ambiente moderno e completo
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  R. Prudente de Moraes, 3108 — Centro, S. J. do Rio Preto.
+                  R. Prudente de Moraes, 3108, Centro, São José do Rio Preto.
                 </p>
               </figcaption>
             </figure>
@@ -443,7 +549,7 @@ function Index() {
             <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow">
               <img
                 src={photoLogoWall.url}
-                alt="Fachada com logo iluminado Supritronica"
+                alt="Fachada com logo iluminado da Supritrônica"
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -461,41 +567,26 @@ function Index() {
             <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow">
               <img
                 src={photoIphone.url}
-                alt="iPhone 17 Pro Max disponível na Supritronica"
+                alt="iPhone disponível na Supritrônica"
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-primary backdrop-blur">
-                  Novidade
+                  Disponível
                 </div>
                 <h3 className="mt-2 font-display text-lg font-bold text-premium">
-                  iPhone 17 Pro Max
+                  Linha iPhone Pro Max
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Disponível com parcelamento em até 18x.
+                  Com parcelamento no boleto para negativados.
                 </p>
               </figcaption>
             </figure>
           </div>
-
-          <div className="mt-12 flex justify-center">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-shine group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-glow animate-glow-pulse transition hover:brightness-110"
-            >
-              <span className="btn-shine-inner" aria-hidden />
-              <MessageCircle className="h-5 w-5" />
-              Consultar disponibilidade
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-            </a>
-          </div>
         </div>
       </section>
-
 
       {/* Diferenciais */}
       <section className="border-t border-border/60 py-24">
@@ -503,15 +594,15 @@ function Index() {
           <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:items-start">
             <div>
               <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-                Por que Supritronica
+                Por que Supritrônica
               </span>
               <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
-                O tipo de tecnologia que{" "}
-                <span className="text-gradient-primary">você sente no dia a dia.</span>
+                <span className="text-premium">Confiança que se constrói</span>{" "}
+                <span className="text-gradient-primary">no atendimento.</span>
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Presença física em São José do Rio Preto, atendimento próximo e projetos entregues
-                com padrão de quem entende de gente antes de entender de produto.
+                Presença física no centro de São José do Rio Preto, equipe próxima e compromisso
+                com cada cliente que entra pela nossa porta.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -543,7 +634,8 @@ function Index() {
               FAQ
             </span>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
-              Perguntas <span className="text-gradient-primary">frequentes</span>
+              <span className="text-premium">Perguntas</span>{" "}
+              <span className="text-gradient-primary">frequentes</span>
             </h2>
           </div>
           <div className="mt-12 space-y-3">
@@ -579,49 +671,57 @@ function Index() {
         </div>
       </section>
 
-      {/* CTA + Formulário */}
+      {/* Contato e localização */}
       <section id="contato" className="relative overflow-hidden border-t border-border/60 py-24">
         <div className="absolute inset-0 bg-gradient-radial-glow" aria-hidden />
         <div className="relative mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-              Pronto para começar?
+              Onde estamos
             </span>
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
-              Pronto para transformar sua casa, empresa ou seu{" "}
-              <span className="text-gradient-primary">próximo dispositivo?</span>
+              <span className="text-premium">Te esperamos no coração</span>{" "}
+              <span className="text-gradient-primary">de Rio Preto.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              Fale agora com nossa equipe e receba um atendimento personalizado para energia solar,
-              segurança, automação ou a compra do seu próximo smartphone ou MacBook.
+              Nossa loja fica no centro da cidade, em um endereço fácil de chegar. Passe para ver os
+              aparelhos de perto, conversar com a equipe e descobrir em quantas parcelas o seu
+              próximo iPhone, Android ou MacBook cabe no seu orçamento.
             </p>
 
-            <div className="mt-8 space-y-4">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
-              >
-                <MessageCircle className="h-5 w-5" /> Falar com a Supritronica
-              </a>
-
-              <div className="grid gap-3 pt-4">
-                <ContactLine icon={Phone} text="(17) 99647-1617" href="tel:+5517996471617" />
-                <ContactLine
-                  icon={Mail}
-                  text="atendimento@supritronica.com.br"
-                  href="mailto:atendimento@supritronica.com.br"
-                />
-                <ContactLine
-                  icon={MapPin}
-                  text="R. Prudente de Moraes, 3108 — Centro, São José do Rio Preto — SP"
-                />
-              </div>
+            <div className="mt-8 grid gap-3">
+              <ContactLine
+                icon={MapPin}
+                text="R. Prudente de Moraes, 3108, Centro, São José do Rio Preto, SP"
+              />
+              <ContactLine icon={Phone} text="(17) 99647-1617" href="tel:+5517996471617" />
+              <ContactLine
+                icon={Mail}
+                text="atendimento@supritronica.com.br"
+                href="mailto:atendimento@supritronica.com.br"
+              />
+              <ContactLine icon={Clock} text="Segunda a sexta, 9h às 18h. Sábado, 9h às 13h." />
             </div>
+
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-shine mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
+            >
+              <span className="btn-shine-inner" aria-hidden />
+              <MessageCircle className="h-5 w-5" /> Fale com a Supritrônica
+            </a>
           </div>
 
-          <ContactForm />
+          <div className="overflow-hidden rounded-3xl border border-border shadow-card">
+            <iframe
+              title="Mapa da localização da Supritrônica"
+              src="https://www.google.com/maps?q=R.+Prudente+de+Moraes,+3108,+Centro,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
+              loading="lazy"
+              className="h-full min-h-[420px] w-full"
+            />
+          </div>
         </div>
       </section>
 
@@ -633,18 +733,18 @@ function Index() {
               <div className="flex items-center gap-3">
                 <img
                   src={logoAsset.url}
-                  alt="Supritronica"
+                  alt="Supritrônica"
                   className="h-10 w-10 object-contain"
                   width={40}
                   height={40}
                 />
                 <span className="font-display text-lg font-semibold">
-                  Supri<span className="text-primary">tronica</span>
+                  Supri<span className="text-primary">trônica</span>
                 </span>
               </div>
               <p className="mt-4 max-w-md text-sm text-muted-foreground">
-                Tecnologia que transforma. Energia solar, segurança, automação e a melhor loja de
-                smartphones e MacBooks em São José do Rio Preto.
+                Venda de iPhones, Android e MacBooks com parcelamento no boleto, mesmo para
+                negativados, e conserto de celulares em São José do Rio Preto.
               </p>
               <div className="mt-6 flex gap-3">
                 {[
@@ -669,10 +769,11 @@ function Index() {
               </h4>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                 {[
-                  ["Energia Solar", "#solar"],
-                  ["Segurança Eletrônica", "#seguranca"],
-                  ["Automação", "#automacao"],
-                  ["Loja & Assistência", "#loja"],
+                  ["Venda de iPhones", "#iphones"],
+                  ["Venda de Android", "#android"],
+                  ["Venda de MacBooks", "#macbooks"],
+                  ["Parcelamento no boleto", "#boleto"],
+                  ["Conserto de celulares", "#conserto"],
                 ].map(([label, href]) => (
                   <li key={label}>
                     <a href={href} className="transition hover:text-primary">
@@ -689,7 +790,7 @@ function Index() {
               </h4>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                 <li>R. Prudente de Moraes, 3108</li>
-                <li>Centro, S. J. do Rio Preto — SP</li>
+                <li>Centro, São José do Rio Preto, SP</li>
                 <li>15010-020</li>
                 <li className="pt-2">
                   <a href="tel:+5517996471617" className="hover:text-primary">
@@ -709,8 +810,8 @@ function Index() {
           </div>
 
           <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-            <span>© {new Date().getFullYear()} Supritronica Tecnologia. Todos os direitos reservados.</span>
-            <span>Feito com tecnologia em Rio Preto.</span>
+            <span>© {new Date().getFullYear()} Supritrônica Tecnologia. Todos os direitos reservados.</span>
+            <span>Tecnologia acessível para todos.</span>
           </div>
         </div>
       </footer>
@@ -724,7 +825,7 @@ function Index() {
         className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-gradient-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
       >
         <MessageCircle className="h-5 w-5" />
-        <span className="hidden sm:inline">Fale conosco</span>
+        <span className="hidden sm:inline">Simule seu parcelamento</span>
       </a>
     </div>
   );
@@ -741,7 +842,7 @@ function ContactLine({
 }) {
   const content = (
     <div className="flex items-center gap-3 text-sm text-muted-foreground">
-      <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
         <Icon className="h-4 w-4" />
       </span>
       <span>{text}</span>
@@ -753,100 +854,5 @@ function ContactLine({
     </a>
   ) : (
     content
-  );
-}
-
-function ContactForm() {
-  const [sent, setSent] = useState(false);
-  return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        const data = new FormData(e.currentTarget);
-        const msg = `Olá! Sou ${data.get("nome")}.%0AServiço de interesse: ${data.get("servico")}.%0A${data.get("mensagem")}%0AContato: ${data.get("telefone")} / ${data.get("email")}`;
-        window.open(`https://wa.me/5517996471617?text=${msg}`, "_blank");
-        setSent(true);
-      }}
-      className="rounded-3xl border border-border bg-card p-6 shadow-card sm:p-8"
-    >
-      <h3 className="font-display text-2xl font-bold">Solicite seu atendimento</h3>
-      <p className="mt-2 text-sm text-muted-foreground">
-        Preencha e enviaremos você direto para nosso WhatsApp.
-      </p>
-
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <Field name="nome" label="Nome completo" required />
-        <Field name="telefone" label="Telefone / WhatsApp" required />
-        <Field name="email" label="E-mail" type="email" className="sm:col-span-2" />
-        <div className="sm:col-span-2">
-          <label className="mb-1.5 block text-xs font-medium uppercase tracking-widest text-muted-foreground">
-            Serviço de interesse
-          </label>
-          <select
-            name="servico"
-            className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/30"
-            defaultValue="Energia Solar"
-          >
-            {[
-              "Energia Solar",
-              "Segurança Eletrônica",
-              "Automação",
-              "Smartphones e MacBooks",
-              "Assistência Técnica",
-              "Outros",
-            ].map((o) => (
-              <option key={o}>{o}</option>
-            ))}
-          </select>
-        </div>
-        <div className="sm:col-span-2">
-          <label className="mb-1.5 block text-xs font-medium uppercase tracking-widest text-muted-foreground">
-            Mensagem
-          </label>
-          <textarea
-            name="mensagem"
-            rows={4}
-            className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/30"
-            placeholder="Conte um pouco sobre o que você precisa..."
-          />
-        </div>
-      </div>
-
-      <button
-        type="submit"
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
-      >
-        {sent ? "Redirecionando ao WhatsApp…" : "Enviar mensagem"}
-        <ArrowRight className="h-4 w-4" />
-      </button>
-    </form>
-  );
-}
-
-function Field({
-  name,
-  label,
-  type = "text",
-  required,
-  className = "",
-}: {
-  name: string;
-  label: string;
-  type?: string;
-  required?: boolean;
-  className?: string;
-}) {
-  return (
-    <div className={className}>
-      <label className="mb-1.5 block text-xs font-medium uppercase tracking-widest text-muted-foreground">
-        {label}
-      </label>
-      <input
-        name={name}
-        type={type}
-        required={required}
-        className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/30"
-      />
-    </div>
   );
 }
