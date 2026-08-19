@@ -24,7 +24,7 @@ import {
   Clock,
 } from "lucide-react";
 
-import logoAsset from "@/assets/supritronica-logo.png.asset.json";
+import logoAsset from "@/assets/supritronica-logo-branca.png.asset.json";
 import heroBg from "@/assets/hero-bg.jpg";
 import prodIphone from "@/assets/prod-iphone.jpg";
 import prodAndroid from "@/assets/prod-android.jpg";
