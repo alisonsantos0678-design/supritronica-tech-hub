@@ -24,7 +24,7 @@ import {
   Clock,
 } from "lucide-react";
 
-import logoAsset from "@/assets/supritronica-logo-branca.png.asset.json";
+import logoAsset from "@/assets/supritronica-logo-transp.png.asset.json";
 import heroBg from "@/assets/hero-bg.jpg";
 import prodIphone from "@/assets/prod-iphone.jpg";
 import prodAndroid from "@/assets/prod-android.jpg";
@@ -170,18 +170,14 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#inicio" className="flex items-center gap-3">
+          <a href="#inicio" className="flex items-center">
             <img
               src={logoAsset.url}
               alt="Supritrônica Tecnologia"
-              className="h-10 w-10 object-contain"
-              width={40}
-              height={40}
+              className="h-14 w-auto object-contain drop-shadow-[0_0_18px_rgba(255,255,255,0.15)]"
             />
-            <span className="font-display text-lg font-semibold tracking-tight">
-              Supri<span className="text-primary">trônica</span>
-            </span>
           </a>
+
 
           <nav className="hidden items-center gap-8 lg:flex">
             {NAV.map((item) => (
@@ -730,18 +726,14 @@ function Index() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-4">
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center">
                 <img
                   src={logoAsset.url}
                   alt="Supritrônica"
-                  className="h-10 w-10 object-contain"
-                  width={40}
-                  height={40}
+                  className="h-16 w-auto object-contain"
                 />
-                <span className="font-display text-lg font-semibold">
-                  Supri<span className="text-primary">trônica</span>
-                </span>
               </div>
+
               <p className="mt-4 max-w-md text-sm text-muted-foreground">
                 Venda de iPhones, Android e MacBooks com parcelamento no boleto, mesmo para
                 negativados, e conserto de celulares em São José do Rio Preto.
