@@ -726,18 +726,14 @@ function Index() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-4">
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center">
                 <img
                   src={logoAsset.url}
                   alt="Supritrônica"
-                  className="h-10 w-10 object-contain"
-                  width={40}
-                  height={40}
+                  className="h-16 w-auto object-contain"
                 />
-                <span className="font-display text-lg font-semibold">
-                  Supri<span className="text-primary">trônica</span>
-                </span>
               </div>
+
               <p className="mt-4 max-w-md text-sm text-muted-foreground">
                 Venda de iPhones, Android e MacBooks com parcelamento no boleto, mesmo para
                 negativados, e conserto de celulares em São José do Rio Preto.
