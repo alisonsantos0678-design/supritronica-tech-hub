@@ -24,26 +24,28 @@ import {
   Clock,
 } from "lucide-react";
 
-import logoAsset from "@/assets/supritronica-logo-transp.png.asset.json";
+import logoAsset from "@/assets/supritronica-logo-transp.png";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroVideoIphone from "@/assets/hero-iphone.mp4";
+import heroVideoMacbook from "@/assets/hero-macbook.mp4";
 import prodIphone from "@/assets/prod-iphone.jpg";
 import prodAndroid from "@/assets/prod-android.jpg";
 import prodMacbook from "@/assets/prod-macbook.jpg";
 import serviceRepair from "@/assets/service-repair.jpg";
-import photoLogoWall from "@/assets/logo-wall.png.asset.json";
-import photoLojaInterior from "@/assets/loja-interior.png.asset.json";
-import photoIphone from "@/assets/iphone-17-pro-max.jpg.asset.json";
+import photoLogoWall from "@/assets/logo-wall.jpg";
+import photoLojaInterior from "@/assets/loja-interior.jpg";
+import photoIphone from "@/assets/iphone-17-pro-max.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Supritrônica: iPhones, Android e MacBooks parcelados no boleto" },
+      { title: "Supritronica: iPhones, Android e MacBooks parcelados no boleto" },
       {
         name: "description",
         content:
           "Venda de iPhones, Android e MacBooks com parcelamento no boleto, mesmo para negativados, e conserto de celulares em São José do Rio Preto.",
       },
-      { property: "og:title", content: "Supritrônica: tecnologia acessível para todos" },
+      { property: "og:title", content: "Supritronica: tecnologia acessível para todos" },
       {
         property: "og:description",
         content:
@@ -105,7 +107,7 @@ const SERVICES = [
     tag: "04 · Assistência",
     title: "Conserto de celulares",
     desc: "Troca de tela, bateria, conectores e reparos em geral com agilidade e transparência. Diagnóstico claro, orçamento antes do serviço e peças de qualidade.",
-    cta: "Fale com a Supritrônica",
+    cta: "Fale com a Supritronica",
     image: serviceRepair,
     bullets: ["Orçamento sem compromisso", "Prazo rápido", "Peças de qualidade"],
   },
@@ -137,10 +139,10 @@ const DIFERENCIAIS = [
 const FAQ = [
   {
     q: "Consigo parcelar mesmo estando negativado?",
-    a: "Sim. O parcelamento no boleto da Supritrônica foi criado justamente para quem está com restrição no nome. A análise é feita internamente, de forma rápida e sem burocracia.",
+    a: "Sim. O parcelamento no boleto da Supritronica foi criado justamente para quem está com restrição no nome. A análise é feita internamente, de forma rápida e sem burocracia.",
   },
   {
-    q: "Quais produtos a Supritrônica vende?",
+    q: "Quais produtos a Supritronica vende?",
     a: "Trabalhamos com iPhones, smartphones Android e MacBooks, em modelos novos e seminovos, sempre com procedência conferida.",
   },
   {
@@ -171,11 +173,9 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <a href="#inicio" className="flex items-center">
-            <img
-              src={logoAsset.url}
-              alt="Supritrônica Tecnologia"
-              className="h-14 w-auto object-contain drop-shadow-[0_0_18px_rgba(255,255,255,0.15)]"
-            />
+            <span className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
+              SUPRITRONICA
+            </span>
           </a>
 
 
@@ -246,13 +246,32 @@ function Index() {
           style={{ backgroundImage: `url(${heroBg})` }}
           aria-hidden
         />
+        <div className="absolute inset-0 flex" aria-hidden>
+          <video
+            className="h-full w-1/2 object-cover opacity-60"
+            src={heroVideoMacbook}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+          <video
+            className="h-full w-1/2 object-cover opacity-60"
+            src={heroVideoIphone}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/55" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/85 to-background" aria-hidden />
         <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="text-premium">Supritrônica: tecnologia</span>{" "}
+              <span className="text-premium">Supritronica: tecnologia</span>{" "}
               <span className="text-gradient-primary">acessível para todos.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
@@ -324,7 +343,7 @@ function Index() {
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              A Supritrônica é uma loja de tecnologia de São José do Rio Preto, dedicada à venda de
+              A Supritronica é uma loja de tecnologia de São José do Rio Preto, dedicada à venda de
               iPhones, smartphones Android e MacBooks, além do conserto de celulares com atendimento
               técnico especializado.
             </p>
@@ -457,7 +476,7 @@ function Index() {
           <div className="overflow-hidden rounded-3xl border border-border shadow-card">
             <img
               src={serviceRepair}
-              alt="Técnico da Supritrônica realizando conserto de celular"
+              alt="Técnico da Supritronica realizando conserto de celular"
               loading="lazy"
               width={1200}
               height={900}
@@ -496,7 +515,7 @@ function Index() {
             >
               <span className="btn-shine-inner" aria-hidden />
               <Wrench className="h-5 w-5" />
-              Fale com a Supritrônica
+              Fale com a Supritronica
             </a>
           </div>
         </div>
@@ -512,7 +531,7 @@ function Index() {
             </span>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
               <span className="text-premium">Venha conhecer</span>{" "}
-              <span className="text-gradient-primary">a Supritrônica</span>
+              <span className="text-gradient-primary">a Supritronica</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
               Um espaço pensado para você ver os aparelhos de perto, tirar dúvidas com a equipe e
@@ -523,8 +542,8 @@ function Index() {
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
             <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow lg:row-span-2">
               <img
-                src={photoLojaInterior.url}
-                alt="Interior da loja Supritrônica"
+                src={photoLojaInterior}
+                alt="Interior da loja Supritronica"
                 loading="lazy"
                 className="h-full min-h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -544,8 +563,8 @@ function Index() {
 
             <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow">
               <img
-                src={photoLogoWall.url}
-                alt="Fachada com logo iluminado da Supritrônica"
+                src={photoLogoWall}
+                alt="Fachada com logo iluminado da Supritronica"
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -562,8 +581,8 @@ function Index() {
 
             <figure className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:border-primary/60 hover:shadow-glow">
               <img
-                src={photoIphone.url}
-                alt="iPhone disponível na Supritrônica"
+                src={photoIphone}
+                alt="iPhone disponível na Supritronica"
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -590,7 +609,7 @@ function Index() {
           <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:items-start">
             <div>
               <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-                Por que Supritrônica
+                Por que Supritronica
               </span>
               <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
                 <span className="text-premium">Confiança que se constrói</span>{" "}
@@ -706,13 +725,13 @@ function Index() {
               className="btn-shine mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-glow transition hover:brightness-110"
             >
               <span className="btn-shine-inner" aria-hidden />
-              <MessageCircle className="h-5 w-5" /> Fale com a Supritrônica
+              <MessageCircle className="h-5 w-5" /> Fale com a Supritronica
             </a>
           </div>
 
           <div className="overflow-hidden rounded-3xl border border-border shadow-card">
             <iframe
-              title="Mapa da localização da Supritrônica"
+              title="Mapa da localização da Supritronica"
               src="https://www.google.com/maps?q=R.+Prudente+de+Moraes,+3108,+Centro,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+SP&output=embed"
               loading="lazy"
               className="h-full min-h-[420px] w-full"
@@ -728,9 +747,9 @@ function Index() {
             <div className="lg:col-span-2">
               <div className="flex items-center">
                 <img
-                  src={logoAsset.url}
-                  alt="Supritrônica"
-                  className="h-16 w-auto object-contain"
+                  src={logoAsset}
+                  alt="Supritronica"
+                  className="h-6 w-auto object-contain"
                 />
               </div>
 
@@ -802,7 +821,7 @@ function Index() {
           </div>
 
           <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-            <span>© {new Date().getFullYear()} Supritrônica Tecnologia. Todos os direitos reservados.</span>
+            <span>© {new Date().getFullYear()} Supritronica Tecnologia. Todos os direitos reservados.</span>
             <span>Tecnologia acessível para todos.</span>
           </div>
         </div>
