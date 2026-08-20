@@ -598,7 +598,7 @@ function Index() {
                 loading="lazy"
                 className="h-full min-h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/22 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-primary backdrop-blur">
                   Loja física
@@ -619,7 +619,7 @@ function Index() {
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/18 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-5">
                 <h3 className="font-display text-lg font-bold text-premium">
                   Identidade que brilha
@@ -637,7 +637,7 @@ function Index() {
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/18 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-primary backdrop-blur">
                   Disponível
