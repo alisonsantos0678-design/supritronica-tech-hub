@@ -277,6 +277,7 @@ function Index() {
         </div>
         <div className="absolute inset-0 bg-black/20" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/50 to-background" aria-hidden />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.55)_100%)]" aria-hidden />
 
         <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-24 text-center sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
