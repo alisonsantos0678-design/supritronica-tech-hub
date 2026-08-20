@@ -280,9 +280,16 @@ function Index() {
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
-            <span className="mb-4 block font-display text-2xl font-bold uppercase tracking-[0.3em] text-premium sm:text-3xl">
-              Supritronica
-            </span>
+            <div className="mb-4 flex items-center gap-4">
+              <img
+                src={logoAsset}
+                alt="Logo"
+                className="h-12 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              />
+              <span className="font-display text-2xl font-bold uppercase tracking-[0.3em] text-premium sm:text-3xl">
+                Supritronica
+              </span>
+            </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.7)] sm:text-6xl lg:text-7xl">
               <span className="text-premium">Supritronica: tecnologia</span>{" "}
               <span className="text-gradient-primary">acessível para todos.</span>
