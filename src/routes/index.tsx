@@ -184,9 +184,6 @@ function Index() {
               alt="Supritronica"
               className="h-11 w-auto object-contain drop-shadow-[0_0_18px_rgba(255,255,255,0.15)]"
             />
-            <span className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-              SUPRITRÔNICA
-            </span>
           </a>
 
 
@@ -287,9 +284,6 @@ function Index() {
                 alt="Logo"
                 className="h-12 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]"
               />
-              <span className="font-display text-2xl font-bold uppercase tracking-[0.3em] text-premium sm:text-3xl">
-                Supritronica
-              </span>
             </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.7)] sm:text-6xl lg:text-7xl">
               <span className="text-premium">Supritronica: tecnologia</span>{" "}
@@ -773,9 +767,6 @@ function Index() {
                   alt="Supritronica"
                   className="h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                 />
-                <span className="font-display text-lg font-bold tracking-tight text-foreground">
-                  SUPRITRÔNICA
-                </span>
               </div>
 
               <p className="mt-4 max-w-md text-sm text-muted-foreground">
