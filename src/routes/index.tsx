@@ -178,9 +178,14 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#inicio" className="flex items-center">
+          <a href="#inicio" className="flex items-center gap-3">
+            <img
+              src={logoAsset}
+              alt="Supritronica"
+              className="h-11 w-auto object-contain drop-shadow-[0_0_18px_rgba(255,255,255,0.15)]"
+            />
             <span className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-              SUPRITRONICA
+              SUPRITRÔNICA
             </span>
           </a>
 
