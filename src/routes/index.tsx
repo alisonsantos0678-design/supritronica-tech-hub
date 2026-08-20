@@ -31,10 +31,13 @@ import heroVideoMacbookAsset from "@/assets/hero-macbook.mp4.asset.json";
 
 const heroVideoIphone = heroVideoIphoneAsset.url;
 const heroVideoMacbook = heroVideoMacbookAsset.url;
-import prodIphone from "@/assets/prod-iphone.jpg";
+import prodIphoneAsset from "@/assets/iphone-branco.jpg.asset.json";
 import prodAndroid from "@/assets/prod-android.jpg";
-import prodMacbook from "@/assets/prod-macbook.jpg";
+import prodMacbookAsset from "@/assets/macbook-air.jpg.asset.json";
 import serviceRepair from "@/assets/service-repair.jpg";
+
+const prodIphone = prodIphoneAsset.url;
+const prodMacbook = prodMacbookAsset.url;
 import photoLogoWall from "@/assets/logo-wall.jpg";
 import photoLojaInterior from "@/assets/loja-interior.jpg";
 import photoIphone from "@/assets/iphone-17-pro-max.jpg";
