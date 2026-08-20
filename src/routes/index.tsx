@@ -259,7 +259,7 @@ function Index() {
         />
         <div className="absolute inset-0 flex overflow-hidden" aria-hidden>
           <video
-            className="h-full w-1/2 scale-[1.15] object-cover object-center opacity-95"
+            className="h-full w-1/2 scale-[1.35] object-cover object-center opacity-95"
             src={heroVideoMacbook}
             autoPlay
             muted
@@ -267,7 +267,7 @@ function Index() {
             playsInline
           />
           <video
-            className="h-full w-1/2 scale-[1.15] object-cover object-center opacity-95"
+            className="h-full w-1/2 scale-[1.35] object-cover object-center opacity-95"
             src={heroVideoIphone}
             autoPlay
             muted
