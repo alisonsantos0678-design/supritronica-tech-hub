@@ -31,10 +31,13 @@ import heroVideoMacbookAsset from "@/assets/hero-macbook.mp4.asset.json";
 
 const heroVideoIphone = heroVideoIphoneAsset.url;
 const heroVideoMacbook = heroVideoMacbookAsset.url;
-import prodIphone from "@/assets/prod-iphone.jpg";
+import prodIphoneAsset from "@/assets/iphone-branco.jpg.asset.json";
 import prodAndroid from "@/assets/prod-android.jpg";
-import prodMacbook from "@/assets/prod-macbook.jpg";
+import prodMacbookAsset from "@/assets/macbook-air.jpg.asset.json";
 import serviceRepair from "@/assets/service-repair.jpg";
+
+const prodIphone = prodIphoneAsset.url;
+const prodMacbook = prodMacbookAsset.url;
 import photoLogoWall from "@/assets/logo-wall.jpg";
 import photoLojaInterior from "@/assets/loja-interior.jpg";
 import photoIphone from "@/assets/iphone-17-pro-max.jpg";
@@ -245,13 +248,13 @@ function Index() {
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center opacity-15"
           style={{ backgroundImage: `url(${heroBg})` }}
           aria-hidden
         />
         <div className="absolute inset-0 flex" aria-hidden>
           <video
-            className="h-full w-1/2 object-cover opacity-60"
+            className="h-full w-1/2 object-cover opacity-95"
             src={heroVideoMacbook}
             autoPlay
             muted
@@ -259,7 +262,7 @@ function Index() {
             playsInline
           />
           <video
-            className="h-full w-1/2 object-cover opacity-60"
+            className="h-full w-1/2 object-cover opacity-95"
             src={heroVideoIphone}
             autoPlay
             muted
@@ -267,16 +270,19 @@ function Index() {
             playsInline
           />
         </div>
-        <div className="absolute inset-0 bg-black/55" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/85 to-background" aria-hidden />
-        <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
+        <div className="absolute inset-0 bg-black/20" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/50 to-background" aria-hidden />
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
-            <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+            <span className="mb-4 block font-display text-2xl font-bold uppercase tracking-[0.3em] text-premium sm:text-3xl">
+              Supritronica
+            </span>
+            <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.7)] sm:text-6xl lg:text-7xl">
               <span className="text-premium">Supritronica: tecnologia</span>{" "}
               <span className="text-gradient-primary">acessível para todos.</span>
             </h1>
+
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
               Venda de iPhones, Android e MacBooks com parcelamento no boleto, mesmo para quem está
               negativado. Também fazemos conserto de celulares com agilidade e confiança.
