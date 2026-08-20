@@ -257,9 +257,9 @@ function Index() {
           style={{ backgroundImage: `url(${heroBg})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 flex" aria-hidden>
+        <div className="absolute inset-0 flex overflow-hidden" aria-hidden>
           <video
-            className="h-full w-1/2 object-cover opacity-95"
+            className="h-full w-1/2 scale-[1.35] object-cover object-center opacity-95"
             src={heroVideoMacbook}
             autoPlay
             muted
@@ -267,7 +267,7 @@ function Index() {
             playsInline
           />
           <video
-            className="h-full w-1/2 object-cover opacity-95"
+            className="h-full w-1/2 scale-[1.35] object-cover object-center opacity-95"
             src={heroVideoIphone}
             autoPlay
             muted
@@ -277,10 +277,11 @@ function Index() {
         </div>
         <div className="absolute inset-0 bg-black/20" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/50 to-background" aria-hidden />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.55)_100%)]" aria-hidden />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
+        <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-24 text-center sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
-            <div className="mb-4 flex items-center gap-4">
+            <div className="mb-4 flex items-center justify-center gap-4">
               <img
                 src={logoAsset}
                 alt="Logo"
@@ -295,12 +296,12 @@ function Index() {
               <span className="text-gradient-primary">acessível para todos.</span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
               Venda de iPhones, Android e MacBooks com parcelamento no boleto, mesmo para quem está
               negativado. Também fazemos conserto de celulares com agilidade e confiança.
             </p>
 
-            <div className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-primary/50 bg-card/70 px-5 py-4 shadow-glow backdrop-blur">
+            <div className="mt-8 inline-flex items-center justify-center gap-3 rounded-2xl border border-primary/50 bg-card/70 px-5 py-4 shadow-glow backdrop-blur">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground">
                 <CreditCard className="h-6 w-6" />
               </span>
@@ -310,7 +311,7 @@ function Index() {
               </span>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -329,14 +330,14 @@ function Index() {
               </a>
             </div>
 
-            <div className="mt-16 grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
+            <div className="mx-auto mt-16 grid max-w-2xl grid-cols-2 justify-items-center gap-6 sm:grid-cols-4">
               {[
                 { n: "iPhone", l: "Novos e seminovos" },
                 { n: "Android", l: "Diversas marcas" },
                 { n: "MacBook", l: "Procedência garantida" },
                 { n: "Boleto", l: "Mesmo negativado" },
               ].map((s) => (
-                <div key={s.l} className="border-l border-primary/40 pl-4">
+                <div key={s.l} className="border-l border-primary/40 pl-4 text-left">
                   <div className="font-display text-2xl font-bold text-foreground sm:text-3xl">
                     {s.n}
                   </div>
