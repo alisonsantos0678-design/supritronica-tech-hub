@@ -168,6 +168,21 @@ function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
 
+  const attachHeroVideo = (video: HTMLVideoElement | null) => {
+    heroVideoRef.current = video;
+    if (!video) return;
+    // Definido via ref callback (não useEffect) para garantir que o atributo
+    // "muted" seja aplicado antes do navegador decidir se pode dar autoplay.
+    // Em SSR o React só seta essa propriedade no cliente, e em muitos
+    // navegadores mobile (Safari/Chrome iOS/Android) isso já é tarde demais
+    // se feito só em useEffect, fazendo o vídeo simplesmente não aparecer.
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute("muted", "");
+    video.playsInline = true;
+    video.setAttribute("playsinline", "true");
+  };
+
   useEffect(() => {
     const video = heroVideoRef.current;
     if (!video) return;
@@ -189,6 +204,9 @@ function Index() {
       tryPlay();
     } else {
       video.addEventListener("loadeddata", tryPlay, { once: true });
+      // Fallback: alguns navegadores mobile não disparam "loadeddata" a tempo
+      // se o vídeo estiver fora da viewport inicial ou em conexão lenta.
+      video.addEventListener("canplay", tryPlay, { once: true });
     }
   }, []);
 
@@ -275,14 +293,17 @@ function Index() {
         />
         <div className="absolute inset-0 overflow-hidden" aria-hidden>
           <video
-            ref={heroVideoRef}
+            ref={attachHeroVideo}
             className="h-full w-full object-cover object-center"
             src={heroVideoBg}
             autoPlay
             muted
+            defaultMuted
             loop
             playsInline
             webkit-playsinline="true"
+            x-webkit-airplay="allow"
+            disablePictureInPicture
             preload="auto"
             poster={heroBg}
           />
@@ -577,7 +598,7 @@ function Index() {
                 loading="lazy"
                 className="h-full min-h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/65 via-background/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-primary backdrop-blur">
                   Loja física
@@ -598,7 +619,7 @@ function Index() {
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-5">
                 <h3 className="font-display text-lg font-bold text-premium">
                   Identidade que brilha
@@ -616,7 +637,7 @@ function Index() {
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-primary backdrop-blur">
                   Disponível
