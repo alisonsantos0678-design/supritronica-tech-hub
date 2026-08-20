@@ -178,9 +178,14 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#inicio" className="flex items-center">
+          <a href="#inicio" className="flex items-center gap-3">
+            <img
+              src={logoAsset}
+              alt="Supritronica"
+              className="h-11 w-auto object-contain drop-shadow-[0_0_18px_rgba(255,255,255,0.15)]"
+            />
             <span className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-              SUPRITRONICA
+              SUPRITRÔNICA
             </span>
           </a>
 
@@ -275,9 +280,16 @@ function Index() {
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
-            <span className="mb-4 block font-display text-2xl font-bold uppercase tracking-[0.3em] text-premium sm:text-3xl">
-              Supritronica
-            </span>
+            <div className="mb-4 flex items-center gap-4">
+              <img
+                src={logoAsset}
+                alt="Logo"
+                className="h-12 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              />
+              <span className="font-display text-2xl font-bold uppercase tracking-[0.3em] text-premium sm:text-3xl">
+                Supritronica
+              </span>
+            </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.7)] sm:text-6xl lg:text-7xl">
               <span className="text-premium">Supritronica: tecnologia</span>{" "}
               <span className="text-gradient-primary">acessível para todos.</span>
@@ -754,12 +766,15 @@ function Index() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-4">
             <div className="lg:col-span-2">
-              <div className="flex items-center">
+              <div className="flex items-center gap-3">
                 <img
                   src={logoAsset}
                   alt="Supritronica"
-                  className="h-6 w-auto object-contain"
+                  className="h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                 />
+                <span className="font-display text-lg font-bold tracking-tight text-foreground">
+                  SUPRITRÔNICA
+                </span>
               </div>
 
               <p className="mt-4 max-w-md text-sm text-muted-foreground">
