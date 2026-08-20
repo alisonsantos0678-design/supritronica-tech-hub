@@ -26,18 +26,11 @@ import {
 
 import logoAsset from "@/assets/supritronica-logo-transp.png";
 import heroBg from "@/assets/hero-bg.jpg";
-import heroVideoIphoneAsset from "@/assets/hero-iphone.mp4.asset.json";
-import heroVideoMacbookAsset from "@/assets/hero-macbook.mp4.asset.json";
-
-const heroVideoIphone = heroVideoIphoneAsset.url;
-const heroVideoMacbook = heroVideoMacbookAsset.url;
-import prodIphoneAsset from "@/assets/iphone-branco.jpg.asset.json";
+import heroVideoBg from "@/assets/hero-video-bg.mp4";
+import prodIphone from "@/assets/prod-iphone.jpg";
 import prodAndroid from "@/assets/prod-android.jpg";
-import prodMacbookAsset from "@/assets/macbook-air.jpg.asset.json";
+import prodMacbook from "@/assets/prod-macbook.jpg";
 import serviceRepair from "@/assets/service-repair.jpg";
-
-const prodIphone = prodIphoneAsset.url;
-const prodMacbook = prodMacbookAsset.url;
 import photoLogoWall from "@/assets/logo-wall.jpg";
 import photoLojaInterior from "@/assets/loja-interior.jpg";
 import photoIphone from "@/assets/iphone-17-pro-max.jpg";
@@ -254,27 +247,18 @@ function Index() {
           style={{ backgroundImage: `url(${heroBg})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 flex overflow-hidden" aria-hidden>
+        <div className="absolute inset-0 overflow-hidden" aria-hidden>
           <video
-            className="h-full w-1/2 scale-[1.35] object-cover object-center opacity-95"
-            src={heroVideoMacbook}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-          <video
-            className="h-full w-1/2 scale-[1.35] object-cover object-center opacity-95"
-            src={heroVideoIphone}
+            className="h-full w-full object-cover object-center"
+            src={heroVideoBg}
             autoPlay
             muted
             loop
             playsInline
           />
         </div>
-        <div className="absolute inset-0 bg-black/20" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/50 to-background" aria-hidden />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.55)_100%)]" aria-hidden />
+        <div className="absolute inset-0 bg-black/45" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/45 to-background" aria-hidden />
 
         <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-24 text-center sm:px-6 lg:px-8 lg:py-36">
           <div className="max-w-3xl animate-fade-up">
@@ -408,7 +392,7 @@ function Index() {
                       height={900}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/45 via-transparent to-transparent" />
                     <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/50 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-white backdrop-blur">
                       {s.tag}
                     </div>
