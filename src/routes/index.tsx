@@ -770,9 +770,6 @@ function Index() {
                   alt="Supritronica"
                   className="h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                 />
-                <span className="font-display text-lg font-bold tracking-tight text-foreground">
-                  SUPRITRÔNICA
-                </span>
               </div>
 
               <p className="mt-4 max-w-md text-sm text-muted-foreground">
