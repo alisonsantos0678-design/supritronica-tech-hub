@@ -163,11 +163,8 @@
   inset: 0;
   background: linear-gradient(120deg, transparent 30%, oklch(1 0 0 / 0.35) 50%, transparent 70%);
   transform: translateX(-120%);
-  transition: transform 0.9s ease;
   pointer-events: none;
-}
-.btn-shine:hover .btn-shine-inner {
-  transform: translateX(120%);
+  animation: shine-sweep 3.2s ease-in-out infinite;
 }
 
 @keyframes float-slow {
@@ -185,6 +182,13 @@
 @keyframes glow-pulse {
   0%, 100% { box-shadow: var(--shadow-glow); }
   50% { box-shadow: var(--shadow-glow-intense); }
+}
+@keyframes shine-sweep {
+  0% { transform: translateX(-120%); opacity: 0; }
+  10% { opacity: 1; }
+  45% { transform: translateX(120%); opacity: 1; }
+  55% { opacity: 0; }
+  100% { transform: translateX(120%); opacity: 0; }
 }
 @keyframes shimmer {
   0% { background-position: -200% 0; }

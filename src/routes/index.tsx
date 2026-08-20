@@ -59,7 +59,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATSAPP_URL =
-  "https://wa.me/5517996471617?text=Ol%C3%A1%2C%20quero%20simular%20meu%20parcelamento%20no%20boleto%20com%20a%20Supritr%C3%B4nica.";
+  "https://wa.me/5517996471617?text=Ol%C3%A1%2C%20quero%20simular%20meu%20parcelamento%20no%20boleto%20com%20a%20Supritronica.";
 
 const NAV = [
   { href: "#inicio", label: "Início" },
