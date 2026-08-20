@@ -26,8 +26,11 @@ import {
 
 import logoAsset from "@/assets/supritronica-logo-transp.png";
 import heroBg from "@/assets/hero-bg.jpg";
-import heroVideoIphone from "@/assets/hero-iphone.mp4";
-import heroVideoMacbook from "@/assets/hero-macbook.mp4";
+import heroVideoIphoneAsset from "@/assets/hero-iphone.mp4.asset.json";
+import heroVideoMacbookAsset from "@/assets/hero-macbook.mp4.asset.json";
+
+const heroVideoIphone = heroVideoIphoneAsset.url;
+const heroVideoMacbook = heroVideoMacbookAsset.url;
 import prodIphone from "@/assets/prod-iphone.jpg";
 import prodAndroid from "@/assets/prod-android.jpg";
 import prodMacbook from "@/assets/prod-macbook.jpg";
