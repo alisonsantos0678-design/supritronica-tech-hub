@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Smartphone,
   Laptop,
@@ -31,6 +31,7 @@ import prodIphone from "@/assets/prod-iphone.jpg";
 import prodAndroid from "@/assets/prod-android.jpg";
 import prodMacbook from "@/assets/prod-macbook.jpg";
 import serviceRepair from "@/assets/service-repair.jpg";
+import serviceRepair2 from "@/assets/service-repair-2.jpg";
 import photoLogoWall from "@/assets/logo-wall.jpg";
 import photoLojaInterior from "@/assets/loja-interior.jpg";
 import photoIphone from "@/assets/iphone-17-pro-max.jpg";
@@ -165,6 +166,31 @@ const FAQ = [
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.playsInline = true;
+    const tryPlay = () => {
+      video.play().catch(() => {
+        // Autoplay bloqueado pelo navegador; tenta de novo no primeiro toque do usuário.
+        const resume = () => {
+          video.play().catch(() => {});
+          document.removeEventListener("touchstart", resume);
+          document.removeEventListener("click", resume);
+        };
+        document.addEventListener("touchstart", resume, { once: true });
+        document.addEventListener("click", resume, { once: true });
+      });
+    };
+    if (video.readyState >= 2) {
+      tryPlay();
+    } else {
+      video.addEventListener("loadeddata", tryPlay, { once: true });
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -249,12 +275,16 @@ function Index() {
         />
         <div className="absolute inset-0 overflow-hidden" aria-hidden>
           <video
+            ref={heroVideoRef}
             className="h-full w-full object-cover object-center"
             src={heroVideoBg}
             autoPlay
             muted
             loop
             playsInline
+            webkit-playsinline="true"
+            preload="auto"
+            poster={heroBg}
           />
         </div>
         <div className="absolute inset-0 bg-black/45" aria-hidden />
@@ -475,7 +505,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="overflow-hidden rounded-3xl border border-border shadow-card">
             <img
-              src={serviceRepair}
+              src={serviceRepair2}
               alt="Técnico da Supritronica realizando conserto de celular"
               loading="lazy"
               width={1200}
@@ -547,7 +577,7 @@ function Index() {
                 loading="lazy"
                 className="h-full min-h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/65 via-background/10 to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-primary backdrop-blur">
                   Loja física
@@ -568,7 +598,7 @@ function Index() {
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-5">
                 <h3 className="font-display text-lg font-bold text-premium">
                   Identidade que brilha
@@ -586,7 +616,7 @@ function Index() {
                 loading="lazy"
                 className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-black/50 px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-primary backdrop-blur">
                   Disponível
